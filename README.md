@@ -1,14 +1,14 @@
-# Trestle Search (trestle-search)
+# Trestle Search Plus (trestle-search-plus)
 
 > Search plugin for the Trestle admin framework
 
 
 ## Getting Started
 
-These instructions assume you have a working Trestle application. To integrate trestle-search, first add it to your application's Gemfile:
+These instructions assume you have a working Trestle application. To integrate trestle-search-plus, first add it to your application's Gemfile:
 
 ```ruby
-gem 'trestle-search'
+gem 'trestle-search-plus'
 ```
 
 Run `bundle install`, and then restart your Rails server.
@@ -43,6 +43,7 @@ Trestle.resource(:articles) do
 end
 ```
 
+**Caveat: this gem is a fork of [trestle-search](https://github.com/TrestleAdmin/trestle-search) by Sam Pohlenz. Both gems use the same namespaces and it is advised to not have both in your Gemfile.** 
 
 ## Integration Examples
 
@@ -50,7 +51,6 @@ end
 2. [PgSearch](https://github.com/TrestleAdmin/trestle-search/wiki/Integration-with-PgSearch)
 3. [Chewy](https://github.com/TrestleAdmin/trestle-search/wiki/Integration-with-Chewy)
 4. [Sunspot](https://github.com/TrestleAdmin/trestle-search/wiki/Integration-with-Sunspot)
-
 
 ## License
 

@@ -1,9 +1,9 @@
 {
-  "name": "trestle-search",
+  "name": "trestle-search-plus",
   "version": "0.4.0",
   "description": "Search plugin for the Trestle admin framework",
   "main": "index.scss",
-  "repository": "https://github.com/TrestleAdmin/trestle-search.git",
+  "repository": "https://github.com/Ezveus/trestle-search-plus.git",
   "author": "Sam Pohlenz <sam@sampohlenz.com>",
   "license": "LGPL-3.0",
   "private": true,
