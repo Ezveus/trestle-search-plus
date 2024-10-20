@@ -1,5 +1,6 @@
 Trestle.configure do |config|
   config.persistent_params << :q
+  config.persistent_params << :filters
 
   config.hook("stylesheets") do
     stylesheet_link_tag "trestle/search"

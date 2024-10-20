@@ -13,22 +13,31 @@ module Trestle
 
       module Collection
         def collection(params={})
-          if searchable?
-            query = params[:q].presence
-            search(query, params) || super
+          relation = searchable? ? search(params[:q].presence, params) || super : super
+
+          if filterable?
+            filter(relation, params)
           else
-            super
+            relation
           end
         end
 
         def search(query, params={})
           adapter.search(query, params)
         end
+
+        def filter(relation, params={})
+          adapter.filter(relation, params)
+        end
       end
 
       module ClassMethods
         def searchable?
           adapter.respond_to?(:search)
+        end
+
+        def filterable?
+          adapter.respond_to?(:filter)
         end
       end
     end

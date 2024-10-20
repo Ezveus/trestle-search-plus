@@ -4,7 +4,9 @@
       <div class="input-group-prepend">
         <span class="input-group-text"><icon class="fa fa-search"></icon></span>
       </div>
-      <%= link_to icon("fa fa-times"), admin.path, class: "clear-search" if params[:q].present? %>
+      <% if params[:q].present? || params[:filters].present? %>
+        <%= link_to icon("fa fa-times"), admin.path, class: "clear-search" %>
+      <% end %>
       <%= search_field_tag :q, params[:q], class: "form-control", autocomplete: "off", placeholder: admin.t("search.placeholder", default: "Search") %>
     </div>
   <% end %>
